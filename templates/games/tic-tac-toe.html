@@ -2,16 +2,16 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>NeikoGames</title>
+    <title>Tic Tac Toe</title>
   </head>
-
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">NeikoGames</a>
+        <a class="navbar-brand" href="/">Pentiminax</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -41,9 +41,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="/games/tic-tac-toe"
-                    >Tic Tac Toe</a
-                  >
+                  <a class="dropdown-item" href="/games/tic-tac-toe">Morpion</a>
                 </li>
               </ul>
             </li>
@@ -51,13 +49,40 @@
         </div>
       </div>
     </nav>
-
     <div class="container mt-5">
       <div class="row">
-        <div class="col-sm-12 col-md-6 offset-md-3"></div>
+        <div class="col-sm-12 col-md-6 offset-md-3">
+          <div class="alert d-none" role="alert" id="turn-message"></div>
+          <div class="card mb-3" id="user-card">
+            <form method="post" id="form">
+              <div class="mb-3">
+                <label for="username" class="form-label"
+                  >Nom d'utilisateur</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  minlength="2"
+                  maxlength="20"
+                  placeholder="Saisir votre nom d'utilisateur"
+                  required
+                />
+
+                <button class="btn btn-primary" id="start" type="submit">
+                  Créer un salon privée
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="card mb-3" id="rooms-card">
+            <div class="card-header">Salons disponibles</div>
+            <ul class="list-group list-group-flush" id="rooms-list"></ul>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="./jquery/jquery.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
