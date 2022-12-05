@@ -54,26 +54,27 @@
         <div class="col-sm-12 col-md-6 offset-md-3">
           <div class="alert d-none" role="alert" id="turn-message"></div>
           <div class="card mb-3" id="user-card">
-            <form method="post" id="form">
-              <div class="mb-3">
-                <label for="username" class="form-label"
-                  >Nom d'utilisateur</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="username"
-                  minlength="2"
-                  maxlength="20"
-                  placeholder="Saisir votre nom d'utilisateur"
-                  required
-                />
-
+            <div class="card-body">
+              <form method="POST" id="form">
+                <div class="mb-3">
+                  <label for="username" class="form-label"
+                    >Nom d'utilisateur</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    minlength="2"
+                    maxlength="20"
+                    placeholder="Saisir votre nom d'utilisateur"
+                    required
+                  />
+                </div>
                 <button class="btn btn-primary" id="start" type="submit">
                   Créer un salon privée
                 </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
           <div class="card mb-3" id="rooms-card">
             <div class="card-header">Salons disponibles</div>
