@@ -1,0 +1,28 @@
+.board {
+  background-color: gainsboro;
+}
+
+.user-card {
+  padding: 1em;
+}
+
+.cell {
+  border: 1px solid;
+  font-size: 5rem;
+  height: 150px;
+  text-align: center;
+  width: 150px;
+}
+
+.cell:hover {
+  cursor: pointer;
+  background-color: rgb(192, 191, 191);
+}
+
+.cell:active {
+  background-color: rgb(155, 154, 154);
+}
+
+.win-cell {
+  background-color: greenyellow !important;
+}
