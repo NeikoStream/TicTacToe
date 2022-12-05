@@ -13,17 +13,14 @@ app.use(
   "/bootstrap/css",
   express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))
 );
-
 app.use(
   "/bootstrap/js",
   express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))
 );
-
 app.use(
   "/jquery",
   express.static(path.join(__dirname, "node_modules/jquery/dist"))
 );
-
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
